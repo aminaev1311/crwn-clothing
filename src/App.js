@@ -1,5 +1,6 @@
 import "./App.css";
-import HomePage from "./pages/homepage.component";
+import HomePage from "./pages/homepage/homepage.component";
+import ShopPage from "./pages/shop/shop.component";
 import { Link, Route, Switch } from "react-router-dom";
 
 const HatsPage = (props) => {
@@ -29,7 +30,8 @@ const JacketsPage = (props) => {
 function App() {
   return (
     <Switch>
-      <Route exact path="/" component={HomePage}></Route>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/shop" component={ShopPage} />
       <Route exact path="/shop/hats" component={HatsPage} />
       <Route path="/shop/hats/:id" component={HatsDetails} />
       <Route exact path="/shop/jackets" component={JacketsPage} />
